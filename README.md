@@ -1,2 +1,2 @@
 # Solitaire
-Un simple jeu du solitaire
+Un simple jeu de solitaire
