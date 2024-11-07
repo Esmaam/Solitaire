@@ -66,6 +66,7 @@
     <None Remove="img\cards\ace_of_hearts.png" />
     <None Remove="img\cards\ace_of_spades.png" />
     <None Remove="img\cards\ace_of_spades2.png" />
+    <None Remove="img\cards\back.png" />
     <None Remove="img\cards\black_joker.png" />
     <None Remove="img\cards\jack_of_clubs.png" />
     <None Remove="img\cards\jack_of_clubs2.png" />
@@ -92,6 +93,12 @@
     <None Remove="img\cards\queen_of_spades.png" />
     <None Remove="img\cards\queen_of_spades2.png" />
     <None Remove="img\cards\red_joker.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\cards\back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
