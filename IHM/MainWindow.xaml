@@ -5,14 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IHM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Solitaire" Width="800" Height="450" WindowState="Maximized">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
         
-        <Button x:Name="next" Click="Next" Content="Next" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25 0 0 0" Padding="8"/>
-        <Image x:Name="test" Grid.Row="1" Width="150" Height="200"/>
+        <Image x:Name="backStack" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Source="img\cards\back.png"/>
+        
+        <Button x:Name="nextButton" Click="Next" Grid.Row="0" Grid.Column="0" Margin="10 0 10 0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="0"/>
+        <Image x:Name="stack" Grid.Row="0" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
     </Grid>
 </Window>
