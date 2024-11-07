@@ -15,7 +15,23 @@ namespace LogicLayer
         #endregion
 
         #region properties
-        public TypeSign Sign { get => sign; set => sign = value; }
+        public TypeSign Sign { get => sign; }
+
+        public TypeColor Color
+        {
+            get
+            {
+                TypeColor color = TypeColor.NULL;
+                switch(sign)
+                {
+                    case TypeSign.HEART: color = TypeColor.RED; break;
+                    case TypeSign.DIAMOND: color = TypeColor.RED; break;
+                    case TypeSign.SPADE: color = TypeColor.BLACK; break;
+                    case TypeSign.CLUB: color = TypeColor.BLACK; break;
+                }
+                return color;
+            }
+        }
         public int Number { get => number; set => number = value; }
         #endregion
 
@@ -24,6 +40,32 @@ namespace LogicLayer
         { 
             this.number = number;
             this.sign = sign;
+        }
+        #endregion
+
+        #region methods
+        public bool IsStackableColumn(Stack column)
+        {
+            bool res = false;
+
+            if ((this.Color != column.GetLastCard.Color) && (this.Number != column.GetLastCard.Number - 1))
+            {
+                res = true;
+            }
+
+            return res;
+        }
+
+        public bool IsStackableFinalStack(Stack finalStack)
+        {
+            bool res = false;
+
+            if ((this.Sign == finalStack.GetLastCard.Sign) && (this.Number == finalStack.GetLastCard.Number + 1))
+            {
+                res = true;
+            }
+
+            return res;
         }
         #endregion
     }
