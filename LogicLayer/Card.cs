@@ -22,7 +22,7 @@ namespace LogicLayer
             get
             {
                 TypeColor color = TypeColor.NULL;
-                switch(sign)
+                switch (sign)
                 {
                     case TypeSign.HEART: color = TypeColor.RED; break;
                     case TypeSign.DIAMOND: color = TypeColor.RED; break;
@@ -36,8 +36,8 @@ namespace LogicLayer
         #endregion
 
         #region constructor
-        public Card(int number, TypeSign sign) 
-        { 
+        public Card(int number, TypeSign sign)
+        {
             this.number = number;
             this.sign = sign;
         }
@@ -48,7 +48,7 @@ namespace LogicLayer
         {
             bool res = false;
 
-            if ((this.Color != column.GetLastCard.Color) && (this.Number != column.GetLastCard.Number - 1))
+            if (this.Color != column.GetLastCard.Color && Number != column.GetLastCard.Number - 1)
             {
                 res = true;
             }
@@ -60,7 +60,7 @@ namespace LogicLayer
         {
             bool res = false;
 
-            if ((this.Sign == finalStack.GetLastCard.Sign) && (this.Number == finalStack.GetLastCard.Number + 1))
+            if (this.Sign == finalStack.GetLastCard.Sign && Number == finalStack.GetLastCard.Number + 1)
             {
                 res = true;
             }
